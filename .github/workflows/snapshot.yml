@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - id: snapshot
-        uses: jku/repository-playground/playground/actions/snapshot@main
+        uses: jku/repository-playground/playground/actions/snapshot@sigstore-test
 
   deploy:
     permissions:
