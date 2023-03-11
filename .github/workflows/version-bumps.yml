@@ -16,14 +16,8 @@ jobs:
     outputs:
       generated: ${{ steps.online-bump.outputs.generated }}
     steps:
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d
-        with:
-          token_format: access_token
-          workload_identity_provider: YOUR_IDENTITY_PROVIDER_HERE
-          service_account: YOUR_SERVICE_ACCOUNT_HERE
       - id: online-bump
-        uses: jku/repository-playground/playground/actions/online-version-bump@main
+        uses: jku/repository-playground/playground/actions/online-version-bump@sigstore-test
 
   offline-version-bump:
     runs-on: ubuntu-latest
@@ -32,7 +26,7 @@ jobs:
       actions: 'write' # for dispatching signing event workflow
     steps:
       - name: Create signing events for offline version bumps
-        uses: jku/repository-playground/playground/actions/offline-version-bump@main
+        uses: jku/repository-playground/playground/actions/offline-version-bump@sigstore-test
 
   deploy:
     permissions:
