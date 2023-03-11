@@ -1,0 +1,64 @@
+{
+ "signatures": [
+  {
+   "keyid": "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635",
+   "sig": "3046022100a3fcb3be39a6dfb763c35d998e4db1c0ed0fdcd99a7f3ac9600555d79a8ea91a022100d091514ac5e881c574bb84a94f96939a5c745342c9d43d8a520ddc4160e91458"
+  }
+ ],
+ "signed": {
+  "_type": "root",
+  "consistent_snapshot": true,
+  "expires": "2024-03-10T12:00:58Z",
+  "keys": {
+   "abcd": {
+    "keytype": "sigstore-oidc",
+    "keyval": {
+     "identity": "https://github.com/jku/sigstore-playground-test/.github/workflows/snapshot.yml@refs/heads/main",
+     "issuer": "https://token.actions.githubusercontent.com"
+    },
+    "scheme": "Fulcio",
+    "x-playground-online-uri": "sigstore:"
+   },
+   "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635": {
+    "keytype": "ecdsa",
+    "keyval": {
+     "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEohqIdE+yTl4OxpX8ZxNUPrg3SL9H\nBDnhZuceKkxy2oMhUOxhWweZeG3bfM1T4ZLnJimC6CAYVU5+F5jZCoftRw==\n-----END PUBLIC KEY-----\n"
+    },
+    "scheme": "ecdsa-sha2-nistp256",
+    "x-playground-keyowner": "@jku"
+   }
+  },
+  "roles": {
+   "root": {
+    "keyids": [
+     "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635"
+    ],
+    "threshold": 1
+   },
+   "snapshot": {
+    "keyids": [
+     "abcd"
+    ],
+    "threshold": 1,
+    "x-playground-expiry-period": 365
+   },
+   "targets": {
+    "keyids": [
+     "da63eeba4841366b8968e2842cd5768933101593c0a59267a156ad6faf7af635"
+    ],
+    "threshold": 1
+   },
+   "timestamp": {
+    "keyids": [
+     "abcd"
+    ],
+    "threshold": 1,
+    "x-playground-expiry-period": 1
+   }
+  },
+  "spec_version": "1.0.31",
+  "version": 1,
+  "x-playground-expiry-period": 365,
+  "x-playground-signing-period": 60
+ }
+}
